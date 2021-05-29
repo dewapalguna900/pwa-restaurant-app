@@ -61,12 +61,12 @@ body {
 
 .app-bar .app-bar__navigation {
   position: absolute;
-  top: 50px;
+  top: 95px;
   left: -180px;
   width: 150px;
   transition: all 0.3s;
   padding: 8px;
-  background-color: fea82f;
+  background-color: #fea82f;
   overflow: hidden;
 }
 
@@ -77,10 +77,11 @@ body {
 .app-bar .app-bar__navigation ul li a {
   display: inline-block;
   text-decoration: none;
-  color: black;
-  padding: 8px;
+  color: white;
+  padding: 8px 4px;
   margin-bottom: 5px;
   width: 100%;
+  font-weight: 500;
 }
 
 /*
