@@ -16,7 +16,7 @@ body {
   */
 
 .app-bar {
-  height: 80px;
+  height: 50px;
   padding: 8px 16px;
   background-color: #fea82f;
   display: grid;
@@ -52,7 +52,7 @@ body {
 }
 
 .app-bar .app-bar__brand img {
-  width: 75px;
+  width: 60px;
 }
 
 .app-bar .app-bar__brand .nav__logo {
@@ -61,7 +61,7 @@ body {
 
 .app-bar .app-bar__navigation {
   position: absolute;
-  top: 95px;
+  top: 65px;
   left: -180px;
   width: 150px;
   transition: all 0.3s;
