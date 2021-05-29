@@ -3,10 +3,13 @@ import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
 class App {
-  constructor({ button, drawer, content }) {
+  constructor({
+    button, drawer, content, navItems,
+  }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
+    this._navItems = navItems;
 
     this._initialAppShell();
   }
@@ -16,6 +19,7 @@ class App {
       button: this._button,
       drawer: this._drawer,
       content: this._content,
+      navItems: this._navItems,
     });
   }
 

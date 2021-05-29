@@ -1,17 +1,19 @@
 import UrlParser from '../../routes/url-parser';
 import DicodingRestaurantDB from '../../data/dicoding-restaurant-source';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
 
 const DetailPage = {
   async render() {
     return `
-          <h2>Detail Page</h2>
+            <div id="restaurant" class="restaurant"></div>
         `;
   },
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await DicodingRestaurantDB.detailRestaurant(url.id);
-    console.log(restaurant);
+    const restaurantContainer = document.querySelector('#restaurant');
+    restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
   },
 };
 
