@@ -19,15 +19,16 @@ const createRestaurantDetailTemplate = (restaurant) => `
 `;
 
 const createRestaurantItemTemplate = (restaurant) => `
-  <div class="restaurant-item">
+  <div class="restaurant-item">    
     <div class="restaurant-item__header">
+        <p class="restaurant__city__label" tabindex="0" aria-label="Restaurant Location is at ${restaurant.city}">${restaurant.city}</p>
         <img class="restaurant-item__header__poster" alt="${restaurant.name}"
-            src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId : 'https://i.picsum.photos/id/1060/5598/3732.jpg?hmac=31kU0jp5ejnPTdEt-8tAXU5sE-buU-y1W1qk_BsiUC8'}">
-        <div class="restaurant-item__header__rating">
-            <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
-        </div>
+            src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId : 'https://i.picsum.photos/id/1060/5598/3732.jpg?hmac=31kU0jp5ejnPTdEt-8tAXU5sE-buU-y1W1qk_BsiUC8'}">       
     </div>
     <div class="restaurant-item__content">
+      <div class="restaurant-item__header__rating">
+          <p>⭐️  <span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
+      </div>
         <h3><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h3>
         <p>${restaurant.description}</p>
     </div>
