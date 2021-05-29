@@ -1,3 +1,6 @@
+import UrlParser from '../../routes/url-parser';
+import DicodingRestaurantDB from '../../data/dicoding-restaurant-source';
+
 const DetailPage = {
   async render() {
     return `
@@ -6,7 +9,9 @@ const DetailPage = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const restaurant = await DicodingRestaurantDB.detailRestaurant(url.id);
+    console.log(restaurant);
   },
 };
 

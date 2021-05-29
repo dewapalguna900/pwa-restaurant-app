@@ -1,3 +1,5 @@
+import DicodingRestaurantDB from '../../data/dicoding-restaurant-source';
+
 const HomePage = {
   async render() {
     return `
@@ -6,7 +8,8 @@ const HomePage = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const restaurants = await DicodingRestaurantDB.homeCatalogue();
+    console.log(restaurants);
   },
 };
 
