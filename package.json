@@ -4,7 +4,9 @@
   "description": "Best Restaurant recommendation for human",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [
     "restaurant",

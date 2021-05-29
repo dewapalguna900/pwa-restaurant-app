@@ -1,0 +1,79 @@
+@media screen and (min-width: 650px) {
+  .app-bar {
+    height: auto;
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .app-bar .app-bar__brand {
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .app-bar .app-bar__brand .nav__logo__only {
+    display: none;
+  }
+
+  .app-bar .app-bar__brand .nav__logo {
+    display: block;
+    width: 200px;
+  }
+
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .movies {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .movie {
+    grid-template-columns: auto 1fr;
+  }
+
+  .movie .movie__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .movie .movie__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .movies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .movies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .movies {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
