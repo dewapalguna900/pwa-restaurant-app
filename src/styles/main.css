@@ -84,6 +84,38 @@ body {
   font-weight: 500;
 }
 
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/images/heros/hero-image_2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #ff6701;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 17px;
+  font-weight: 300;
+}
+
 /*
     Main Content
   */

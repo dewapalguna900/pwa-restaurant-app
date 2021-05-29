@@ -41,6 +41,22 @@
     margin: 0;
   }
 
+  .hero {
+    min-height: 450px;
+  }
+
+  .hero__inner {
+    max-width: 750px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+
+  .hero__tagline {
+    font-size: 24px;
+  }
+
   .restaurants {
     grid-template-columns: 1fr 1fr;
   }
@@ -78,6 +94,18 @@
   .review__list__wrapper {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .hero__inner {
+    max-width: 800px;
+  }
+
+  .hero__title {
+    font-size: 56px;
+  }
+
+  .hero__tagline {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -87,5 +115,13 @@
 
   .review__list__wrapper {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero__title {
+    font-size: 60px;
+  }
+
+  .hero__tagline {
+    font-size: 35px;
   }
 }
