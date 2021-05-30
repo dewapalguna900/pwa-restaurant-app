@@ -5,7 +5,7 @@ const HomePage = {
   async render() {
     return `
           <div class="content">
-            <h2 class="content__heading">Best Restaurants</h2>
+            <h2 class="content__heading" tabindex="0">Best Restaurants</h2>
             <div id="restaurants" class="restaurants">
 
             </div>
@@ -16,8 +16,10 @@ const HomePage = {
   async afterRender() {
     const restaurants = await DicodingRestaurantDB.homeCatalogue();
     const restaurantsContainer = document.querySelector('#restaurants');
+    let restaurantItemIndex = 1;
     restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+      restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant, restaurantItemIndex);
+      restaurantItemIndex++;
     });
   },
 };
