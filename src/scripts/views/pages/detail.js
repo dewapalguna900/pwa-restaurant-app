@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import DicodingRestaurantDB from '../../data/dicoding-restaurant-source';
-import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate, errorPageTemplate } from '../templates/template-creator';
 import PreloaderInitiator from '../../utils/preloader-initiator';
 import FavoriteButtonInitiator from '../../utils/favorite-button-initiator';
 
@@ -19,7 +19,7 @@ const DetailPage = {
     try {
       PreloaderInitiator.preloaderOn(restaurantContainer);
       restaurant = await DicodingRestaurantDB.detailRestaurant(url.id);
-    } finally {
+
       PreloaderInitiator.preloaderOff(restaurantContainer);
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
@@ -34,6 +34,8 @@ const DetailPage = {
           city: restaurant.city,
         },
       });
+    } catch (e) {
+      restaurantContainer.innerHTML = errorPageTemplate();
     }
   },
 };

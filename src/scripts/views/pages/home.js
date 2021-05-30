@@ -1,5 +1,5 @@
 import DicodingRestaurantDB from '../../data/dicoding-restaurant-source';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import { createRestaurantItemTemplate, errorPageTemplate } from '../templates/template-creator';
 import PreloaderInitiator from '../../utils/preloader-initiator';
 
 const HomePage = {
@@ -19,13 +19,14 @@ const HomePage = {
     try {
       PreloaderInitiator.preloaderOn(restaurantsContainer);
       restaurants = await DicodingRestaurantDB.homeCatalogue();
-    } finally {
       PreloaderInitiator.preloaderOff(restaurantsContainer);
       let restaurantItemIndex = 1;
-      restaurants.forEach((restaurant) => {
+      restaurants.restaurants.forEach((restaurant) => {
         restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant, restaurantItemIndex);
         restaurantItemIndex++;
       });
+    } catch (e) {
+      restaurantsContainer.innerHTML = errorPageTemplate();
     }
   },
 };

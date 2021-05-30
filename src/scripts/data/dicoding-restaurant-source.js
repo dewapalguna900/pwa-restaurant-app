@@ -4,7 +4,7 @@ class DicodingRestaurantDB {
   static async homeCatalogue() {
     const response = await fetch(API_ENDPOINT.HOME);
     const responseJson = await response.json();
-    return responseJson.restaurants;
+    return responseJson;
   }
 
   static async detailRestaurant(id) {

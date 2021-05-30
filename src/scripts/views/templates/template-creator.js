@@ -122,9 +122,16 @@ const createFavoritedButtonTemplate = () => `
   </button>
 `;
 
+const errorPageTemplate = () => `
+  <h2 style="text-align: center">Data cannot be loaded</h2>
+  <p style="text-align: center">Try to visit this page with the internet <strong>On</strong> first, then please <strong>Try Again</strong>.</p>
+  <p style="text-align: right">Thank you.</p>
+`;
+
 export {
   createRestaurantDetailTemplate,
   createRestaurantItemTemplate,
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
+  errorPageTemplate,
 };
