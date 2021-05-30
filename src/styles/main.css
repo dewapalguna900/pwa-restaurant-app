@@ -11,6 +11,13 @@ body {
   flex-direction: column;
 }
 
+/* Preloader Icon */
+#preloader__icon {
+  z-index: 999;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Skip to Content */
 .skip__link {
   position: absolute;
