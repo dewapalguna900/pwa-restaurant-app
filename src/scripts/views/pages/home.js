@@ -27,13 +27,6 @@ const HomePage = {
         restaurantItemIndex++;
       });
     }
-    // const restaurants = await DicodingRestaurantDB.homeCatalogue();
-    // const restaurantsContainer = document.querySelector('#restaurants');
-    // let restaurantItemIndex = 1;
-    // restaurants.forEach((restaurant) => {
-    //   restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant, restaurantItemIndex);
-    //   restaurantItemIndex++;
-    // });
   },
 };
 

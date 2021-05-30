@@ -23,9 +23,6 @@ const DetailPage = {
       PreloaderInitiator.preloaderOff(restaurantContainer);
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
-      // const favoriteButtonContainer = document.querySelector('#favoriteButtonContainer');
-      // favoriteButtonContainer.innerHTML = createFavoriteButtonTemplate();
-
       FavoriteButtonInitiator.init({
         favoriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
         restaurant: {
