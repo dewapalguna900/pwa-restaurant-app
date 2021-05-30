@@ -11,6 +11,23 @@ body {
   flex-direction: column;
 }
 
+/* Skip to Content */
+.skip__link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background-color: #ff6701;
+  color: white;
+  padding: 8px;
+  box-sizing: border-box;
+  z-index: 100;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.skip__link:focus {
+  top: 0;
+}
+
 /*
     AppBar
   */
@@ -131,7 +148,16 @@ main {
 }
 
 .content .content__heading {
-  font-weight: normal;
+  font-weight: 500;
+  text-align: center;
+}
+
+.content .content__heading::after {
+  content: "";
+  margin-top: 16px;
+  margin-bottom: 8px;
+  display: block;
+  border-bottom: 2px solid #aaa;
 }
 
 /*

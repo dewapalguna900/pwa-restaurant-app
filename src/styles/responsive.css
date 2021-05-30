@@ -77,6 +77,16 @@
 }
 
 @media screen and (min-width: 850px) {
+  .skip__link {
+    top: -100px;
+    padding: 12px;
+    font-size: 28px;
+  }
+
+  .content .content__heading {
+    font-size: 2em;
+  }
+
   .restaurants {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -87,6 +97,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .content .content__heading {
+    font-size: 2.5em;
+  }
+
   .restaurants {
     grid-template-columns: repeat(4, 1fr);
   }
