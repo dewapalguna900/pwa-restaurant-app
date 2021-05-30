@@ -263,9 +263,9 @@ main {
 }
 
 /*
-   Like
+   Favorite button
 */
-.like {
+.favorite {
   font-size: 22px;
   position: fixed;
   bottom: 16px;

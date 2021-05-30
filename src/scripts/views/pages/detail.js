@@ -1,13 +1,14 @@
 import UrlParser from '../../routes/url-parser';
 import DicodingRestaurantDB from '../../data/dicoding-restaurant-source';
-import { createRestaurantDetailTemplate, createLikeButtonTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import PreloaderInitiator from '../../utils/preloader-initiator';
+import FavoriteButtonInitiator from '../../utils/favorite-button-initiator';
 
 const DetailPage = {
   async render() {
     return `
             <div id="restaurant" class="restaurant"></div>
-            <div id="likeButtonContainer"></div>
+            <div id="favoriteButtonContainer"></div>
         `;
   },
 
@@ -22,8 +23,20 @@ const DetailPage = {
       PreloaderInitiator.preloaderOff(restaurantContainer);
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
-      const likeButtonContainer = document.querySelector('#likeButtonContainer');
-      likeButtonContainer.innerHTML = createLikeButtonTemplate();
+      // const favoriteButtonContainer = document.querySelector('#favoriteButtonContainer');
+      // favoriteButtonContainer.innerHTML = createFavoriteButtonTemplate();
+
+      FavoriteButtonInitiator.init({
+        favoriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
+        restaurant: {
+          id: restaurant.id,
+          name: restaurant.name,
+          description: restaurant.description,
+          pictureId: restaurant.pictureId,
+          rating: restaurant.rating,
+          city: restaurant.city,
+        },
+      });
     }
   },
 };
