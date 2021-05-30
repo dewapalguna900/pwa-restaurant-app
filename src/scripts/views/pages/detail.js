@@ -1,12 +1,13 @@
 import UrlParser from '../../routes/url-parser';
 import DicodingRestaurantDB from '../../data/dicoding-restaurant-source';
-import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate, createLikeButtonTemplate } from '../templates/template-creator';
 import PreloaderInitiator from '../../utils/preloader-initiator';
 
 const DetailPage = {
   async render() {
     return `
             <div id="restaurant" class="restaurant"></div>
+            <div id="likeButtonContainer"></div>
         `;
   },
 
@@ -20,6 +21,9 @@ const DetailPage = {
     } finally {
       PreloaderInitiator.preloaderOff(restaurantContainer);
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
+
+      const likeButtonContainer = document.querySelector('#likeButtonContainer');
+      likeButtonContainer.innerHTML = createLikeButtonTemplate();
     }
   },
 };
