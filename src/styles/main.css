@@ -195,6 +195,10 @@ main {
   box-sizing: border-box;
 }
 
+.restaurant-item__not__found p {
+  text-align: center;
+}
+
 /*
     Restaurant Item
   */
@@ -217,10 +221,6 @@ main {
 
 .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
   width: 100%;
-}
-
-.restaurant-item__header__rating {
-  /* padding-bottom: 16px; */
 }
 
 .restaurant-item .restaurant-item__content {

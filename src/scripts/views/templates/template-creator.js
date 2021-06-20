@@ -104,7 +104,7 @@ const createRestaurantItemTemplate = (restaurant, index) => `
       <div class="restaurant-item__header__rating" tabindex="0" aria-label="Restaurant Rating is ${restaurant.rating}">
           <p>⭐️  <span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
       </div>
-        <h3><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h3>
+        <h3 class="restaurant__list__title"><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h3>
         <p tabindex="0" aria-label="Restaurant description is ${restaurant.description}">${restaurant.description}</p>
     </div>
   </div>
