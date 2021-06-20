@@ -10,12 +10,6 @@ const DrawerInitiator = {
       this._closeDrawer(event, drawer);
     });
 
-    button.addEventListener('keyup', (event) => {
-      if (event.keyCode === 13) {
-        this._toggleDrawer(event, drawer);
-      }
-    });
-
     navItems.forEach((navItem) => {
       navItem.addEventListener('click', (event) => {
         this._closeDrawer(event, drawer);

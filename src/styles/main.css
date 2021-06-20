@@ -64,6 +64,7 @@ body {
   padding: 8px;
   cursor: pointer;
   min-width: 44px;
+  min-height: 44px;
 }
 
 .app-bar .app-bar__brand {
@@ -103,9 +104,10 @@ body {
   text-decoration: none;
   color: white;
   padding: 8px 4px;
-  margin-bottom: 5px;
+  min-height: 44px;
   width: 100%;
   font-weight: 500;
+  line-height: 44px;
 }
 
 /* Hero Section */
@@ -210,6 +212,7 @@ main {
 
 .restaurant-item__header img {
   height: 250px;
+  object-fit: cover;
 }
 
 .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
@@ -217,7 +220,7 @@ main {
 }
 
 .restaurant-item__header__rating {
-  padding-bottom: 16px;
+  /* padding-bottom: 16px; */
 }
 
 .restaurant-item .restaurant-item__content {
@@ -225,12 +228,15 @@ main {
 }
 
 .restaurant-item .restaurant-item__content h3 {
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
 }
 
 .restaurant-item .restaurant-item__content h3 a {
+  display: inline-block;
   color: #db0000;
   text-decoration: none;
+  min-height: 44px;
+  line-height: 44px;
 }
 
 .restaurant-item .restaurant-item__content p {
@@ -268,7 +274,7 @@ main {
 .favorite {
   font-size: 22px;
   position: fixed;
-  bottom: 16px;
+  bottom: 44px;
   right: 16px;
   background-color: #ff6701;
   color: white;
