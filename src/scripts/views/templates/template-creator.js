@@ -110,13 +110,13 @@ const createRestaurantItemTemplate = (restaurant, index) => `
   </div>
   `;
 
-const createFavoriteButtonTemplate = () => `
+const createFavoriteRestaurantButtonTemplate = () => `
   <button aria-label="favorite this restaurant" id="favoriteButton" class="favorite">
      <i class="far fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-const createFavoritedButtonTemplate = () => `
+const createUnfavoriteRestaurantButtonTemplate = () => `
   <button aria-label="unfavorite this restaurant" id="favoriteButton" class="favorite">
     <i class="fas fa-heart" aria-hidden="true"></i>
   </button>
@@ -131,7 +131,7 @@ const errorPageTemplate = () => `
 export {
   createRestaurantDetailTemplate,
   createRestaurantItemTemplate,
-  createFavoriteButtonTemplate,
-  createFavoritedButtonTemplate,
+  createFavoriteRestaurantButtonTemplate,
+  createUnfavoriteRestaurantButtonTemplate,
   errorPageTemplate,
 };

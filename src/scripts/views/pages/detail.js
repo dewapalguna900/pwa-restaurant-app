@@ -2,7 +2,8 @@ import UrlParser from '../../routes/url-parser';
 import DicodingRestaurantDB from '../../data/dicoding-restaurant-source';
 import { createRestaurantDetailTemplate, errorPageTemplate } from '../templates/template-creator';
 import PreloaderInitiator from '../../utils/preloader-initiator';
-import FavoriteButtonInitiator from '../../utils/favorite-button-initiator';
+import FavoriteButtonInitiator from '../../utils/favorite-button-presenter';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 
 const DetailPage = {
   async render() {
@@ -25,6 +26,7 @@ const DetailPage = {
 
       FavoriteButtonInitiator.init({
         favoriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
+        favoriteRestaurants: FavoriteRestaurantIdb,
         restaurant: {
           id: restaurant.id,
           name: restaurant.name,
