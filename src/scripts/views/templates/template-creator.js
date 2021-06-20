@@ -97,8 +97,8 @@ const createRestaurantItemTemplate = (restaurant, index) => `
   <div class="restaurant-item" tabindex="0" aria-label="Restaurant number ${index}">    
     <div class="restaurant-item__header">
         <p class="restaurant__city__label" tabindex="0" aria-label="Restaurant Location is at ${restaurant.city}">${restaurant.city}</p>
-        <img class="restaurant-item__header__poster" alt="${restaurant.name}" tabindex="0"
-            src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId : 'https://i.picsum.photos/id/1060/5598/3732.jpg?hmac=31kU0jp5ejnPTdEt-8tAXU5sE-buU-y1W1qk_BsiUC8'}">       
+        <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name}" tabindex="0"
+            data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId : 'https://i.picsum.photos/id/1060/5598/3732.jpg?hmac=31kU0jp5ejnPTdEt-8tAXU5sE-buU-y1W1qk_BsiUC8'}">       
     </div>
     <div class="restaurant-item__content">
       <div class="restaurant-item__header__rating" tabindex="0" aria-label="Restaurant Rating is ${restaurant.rating}">
