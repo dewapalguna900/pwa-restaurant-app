@@ -5,9 +5,9 @@ Scenario('Preloader activated on homepage', async ({ I }) => {
 
   I.seeElement('#preloader__wrapper');
 
-  if (I.seeElement('.restaurant-item')) {
-    I.dontSeeElement('#preloader__wrapper');
-  }
+  I.seeElement('.restaurant-item');
+
+  I.dontSeeElement('#preloader__wrapper');
 });
 
 Scenario('Preloader activated on detail page', async ({ I }) => {
@@ -18,7 +18,7 @@ Scenario('Preloader activated on detail page', async ({ I }) => {
 
   I.seeElement('#preloader__wrapper');
 
-  if (I.seeElement('.restaurant__title')) {
-    I.dontSeeElement('#preloader__wrapper');
-  }
+  I.seeElement('.restaurant__title');
+
+  I.dontSeeElement('#preloader__wrapper');
 });

@@ -50,9 +50,8 @@ Scenario('unfavorite restaurant on the favorite list', async ({ I }) => {
 
   I.seeElement('#favoriteButton');
   const favoriteButtonLabel = await I.grabAttributeFrom('#favoriteButton', 'aria-label');
-  if (favoriteButtonLabel !== 'unfavorite this restaurant') {
-    return;
-  }
+
+  assert.strictEqual(favoriteButtonLabel, 'unfavorite this restaurant');
 
   I.click('#favoriteButton');
 
